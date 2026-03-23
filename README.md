@@ -102,7 +102,7 @@ You can deploy this project on:
 
 ## 👨‍💻 Author
 
-Aniket Rai
+Aniket Rai : 
 
 * Portfolio: aniket-rai-dev-portfolio.netlify.app
 
