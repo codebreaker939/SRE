@@ -1,16 +1,108 @@
-# React + Vite
+# ⚡ SAI RAM Electrical Enterprises Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A professional business website for **SAI RAM Electrical Enterprises**, showcasing services, company story, expertise, and contact details with a clean and modern UI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🏢 About the Company
 
-## React Compiler
+SAI RAM Electrical Enterprises was founded by S.P Rai, a passionate individual who started his journey as a learning electrician despite being a school dropout. Over the years, through dedication and hands-on experience, he built a skilled team and expanded into handling large-scale electrical contracts.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Modern and responsive design
+* Service showcase section
+* Founder story section
+* Why Choose Us section
+* Safety measures highlight
+* Contact form for inquiries
+* Mobile-friendly layout
+
+---
+
+## 🛠️ Tech Stack
+
+* Frontend: HTML, CSS, JavaScript
+* Styling: Custom CSS
+* Deployment: Netlify / Vercel
+
+---
+
+## 📁 Project Structure
+
+```id="j9l2h1"
+sai-ram-website/
+│── index.html
+│── css/
+│── js/
+│── assets/
+│── images/
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+1. Clone the repository:
+
+```bash id="p3x8dl"
+git clone <your-repo-link>
+cd sai-ram-website
+```
+
+2. Open the project:
+
+```id="m7n4pa"
+Open index.html in your browser
+```
+
+---
+
+## 🎯 Key Sections
+
+### Founder Story
+
+A journey of **S.P Rai**, from a beginner electrician to building a strong electrical enterprise.
+
+### Why Choose Us
+
+* Experienced team
+* Reliable service
+* Timely project delivery
+* Customer satisfaction focus
+
+### Commitment to Excellence
+
+We maintain high standards in every project, ensuring quality workmanship, durability, and efficient execution.
+
+### Safety Measures in Action
+
+* Use of certified equipment
+* Trained professionals
+* Strict safety protocols
+* On-site risk management
+
+---
+
+
+
+## 🌍 Deployment
+
+You can deploy this project on:
+
+* Netlify
+* Vercel
+* GitHub Pages
+
+
+
+---
+
+## 👨‍💻 Author
+
+Aniket Rai
+
+* Portfolio: aniket-rai-dev-portfolio.netlify.app
+
