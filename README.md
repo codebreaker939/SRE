@@ -104,5 +104,5 @@ You can deploy this project on:
 
 Aniket Rai : 
 
-* Portfolio: aniket-rai-dev-portfolio.netlify.app
+* Portfolio: https://anifolio.netlify.app/
 
