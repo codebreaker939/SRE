@@ -1,0 +1,295 @@
+/* ========== ELECTRICAL BACKGROUND DECORATIONS ========== */
+
+.ebg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ---- GRADIENT MESH BLOBS ---- */
+.ebg__blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+}
+
+.ebg__blob--1 {
+  width: 500px;
+  height: 500px;
+  top: -15%;
+  right: -10%;
+}
+.ebg__blob--2 {
+  width: 400px;
+  height: 400px;
+  bottom: -15%;
+  left: -10%;
+}
+
+/* Yellow variant blobs */
+.ebg__blob--1.ebg__blob--yellow { background: rgba(255,179,0,0.08); }
+.ebg__blob--2.ebg__blob--yellow { background: rgba(255,179,0,0.05); }
+
+/* Blue variant blobs */
+.ebg__blob--1.ebg__blob--blue { background: rgba(66,165,245,0.07); }
+.ebg__blob--2.ebg__blob--blue { background: rgba(66,165,245,0.04); }
+
+/* Mixed variant blobs */
+.ebg__blob--1.ebg__blob--mixed { background: rgba(255,179,0,0.07); }
+.ebg__blob--2.ebg__blob--mixed { background: rgba(66,165,245,0.05); }
+
+
+/* ---- GRID PATTERN ---- */
+.ebg__grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 80%);
+}
+
+/* ---- DOT PATTERN ---- */
+.ebg__dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+  mask-image: radial-gradient(ellipse 60% 60% at 30% 70%, black 10%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse 60% 60% at 30% 70%, black 10%, transparent 70%);
+}
+
+/* ---- GEOMETRIC RING SHAPES ---- */
+.ebg__shape--ring {
+  position: absolute;
+  border-radius: 50%;
+  border-width: 1.5px;
+  border-style: solid;
+}
+
+.ebg__shape--ring-1 {
+  width: 180px;
+  height: 180px;
+  top: 8%;
+  right: 6%;
+  animation: ringFloat 12s ease-in-out infinite;
+}
+.ebg__shape--ring-2 {
+  width: 100px;
+  height: 100px;
+  bottom: 12%;
+  left: 4%;
+  animation: ringFloat 10s ease-in-out infinite reverse;
+}
+.ebg__shape--ring-3 {
+  width: 140px;
+  height: 140px;
+  top: 50%;
+  right: 2%;
+  animation: ringFloat 14s ease-in-out infinite;
+}
+
+/* Ring colors */
+.ebg__shape--ring.ebg__shape--yellow { border-color: rgba(255,179,0,0.15); }
+.ebg__shape--ring.ebg__shape--blue   { border-color: rgba(66,165,245,0.12); }
+.ebg__shape--ring.ebg__shape--mixed  { border-color: rgba(255,179,0,0.12); }
+.ebg__shape--ring-2.ebg__shape--mixed { border-color: rgba(66,165,245,0.1); }
+
+@keyframes ringFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%      { transform: translateY(-15px) rotate(5deg); }
+}
+
+
+/* ---- DIAMOND SHAPES ---- */
+.ebg__shape--diamond {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-width: 1.5px;
+  border-style: solid;
+  transform: rotate(45deg);
+  animation: diamondPulse 6s ease-in-out infinite;
+}
+.ebg__shape--diamond-1 { top: 25%; left: 5%; }
+.ebg__shape--diamond-2 { bottom: 20%; right: 8%; animation-delay: 3s; }
+
+.ebg__shape--diamond.ebg__shape--yellow { border-color: rgba(255,179,0,0.2); }
+.ebg__shape--diamond.ebg__shape--blue   { border-color: rgba(66,165,245,0.18); }
+.ebg__shape--diamond.ebg__shape--mixed  { border-color: rgba(255,179,0,0.16); }
+
+@keyframes diamondPulse {
+  0%, 100% { opacity: 0.5; transform: rotate(45deg) scale(1); }
+  50%      { opacity: 1; transform: rotate(45deg) scale(1.15); }
+}
+
+
+/* ---- CROSS / PLUS SHAPES ---- */
+.ebg__shape--cross {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+}
+.ebg__shape--cross::before,
+.ebg__shape--cross::after {
+  content: '';
+  position: absolute;
+  background: currentColor;
+}
+.ebg__shape--cross::before {
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.ebg__shape--cross::after {
+  width: 2px;
+  height: 100%;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.ebg__shape--cross-1 { top: 60%; right: 12%; }
+
+.ebg__shape--cross.ebg__shape--yellow { color: rgba(255,179,0,0.2); }
+.ebg__shape--cross.ebg__shape--blue   { color: rgba(66,165,245,0.18); }
+.ebg__shape--cross.ebg__shape--mixed  { color: rgba(255,179,0,0.16); }
+
+
+/* ---- HEXAGON SHAPES ---- */
+.ebg__shape--hex {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-width: 1.5px;
+  border-style: solid;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  animation: ringFloat 11s ease-in-out infinite;
+}
+.ebg__shape--hex-1 { bottom: 30%; left: 8%; }
+
+.ebg__shape--hex.ebg__shape--yellow {
+  border-color: rgba(255,179,0,0.18);
+  background: rgba(255,179,0,0.03);
+}
+.ebg__shape--hex.ebg__shape--blue {
+  border-color: rgba(66,165,245,0.15);
+  background: rgba(66,165,245,0.02);
+}
+.ebg__shape--hex.ebg__shape--mixed {
+  border-color: rgba(255,179,0,0.14);
+  background: rgba(255,179,0,0.02);
+}
+
+
+/* ---- ACCENT LINES ---- */
+.ebg__line {
+  position: absolute;
+  height: 1px;
+}
+
+.ebg__line--1 {
+  width: 200px;
+  top: 20%;
+  right: 5%;
+  transform: rotate(-25deg);
+}
+.ebg__line--2 {
+  width: 150px;
+  bottom: 25%;
+  left: 3%;
+  transform: rotate(20deg);
+}
+.ebg__line--3 {
+  width: 120px;
+  top: 70%;
+  right: 15%;
+  transform: rotate(-15deg);
+}
+.ebg__line--4 {
+  width: 180px;
+  top: 40%;
+  left: 8%;
+  transform: rotate(30deg);
+}
+
+.ebg__line--yellow { background: linear-gradient(90deg, transparent, rgba(255,179,0,0.25), transparent); }
+.ebg__line--blue   { background: linear-gradient(90deg, transparent, rgba(66,165,245,0.2), transparent); }
+.ebg__line--mixed  { background: linear-gradient(90deg, transparent, rgba(255,179,0,0.2), transparent); }
+.ebg__line--2.ebg__line--mixed { background: linear-gradient(90deg, transparent, rgba(66,165,245,0.18), transparent); }
+
+
+/* ---- CORNER BRACKETS ---- */
+.ebg__corner {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+}
+
+.ebg__corner--tl {
+  top: 20px;
+  left: 20px;
+}
+.ebg__corner--br {
+  bottom: 20px;
+  right: 20px;
+}
+
+.ebg__corner--tl.ebg__corner--yellow {
+  border-top: 2px solid rgba(255,179,0,0.2);
+  border-left: 2px solid rgba(255,179,0,0.2);
+}
+.ebg__corner--br.ebg__corner--yellow {
+  border-bottom: 2px solid rgba(255,179,0,0.2);
+  border-right: 2px solid rgba(255,179,0,0.2);
+}
+
+.ebg__corner--tl.ebg__corner--blue {
+  border-top: 2px solid rgba(66,165,245,0.15);
+  border-left: 2px solid rgba(66,165,245,0.15);
+}
+.ebg__corner--br.ebg__corner--blue {
+  border-bottom: 2px solid rgba(66,165,245,0.15);
+  border-right: 2px solid rgba(66,165,245,0.15);
+}
+
+.ebg__corner--tl.ebg__corner--mixed {
+  border-top: 2px solid rgba(255,179,0,0.18);
+  border-left: 2px solid rgba(255,179,0,0.18);
+}
+.ebg__corner--br.ebg__corner--mixed {
+  border-bottom: 2px solid rgba(66,165,245,0.14);
+  border-right: 2px solid rgba(66,165,245,0.14);
+}
+
+
+/* ---- DOT CLUSTERS ---- */
+.ebg__dotgroup {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-size: 12px 12px;
+}
+
+.ebg__dotgroup--1 { top: 35%; left: 2%; }
+.ebg__dotgroup--2 { bottom: 8%; right: 4%; }
+.ebg__dotgroup--3 { top: 15%; left: 40%; }
+
+.ebg__dotgroup--yellow {
+  background-image: radial-gradient(circle, rgba(255,179,0,0.3) 1.5px, transparent 1.5px);
+}
+.ebg__dotgroup--blue {
+  background-image: radial-gradient(circle, rgba(66,165,245,0.25) 1.5px, transparent 1.5px);
+}
+.ebg__dotgroup--mixed {
+  background-image: radial-gradient(circle, rgba(255,179,0,0.25) 1.5px, transparent 1.5px);
+}
+.ebg__dotgroup--2.ebg__dotgroup--mixed {
+  background-image: radial-gradient(circle, rgba(66,165,245,0.22) 1.5px, transparent 1.5px);
+}
